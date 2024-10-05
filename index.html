@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Integrated Games</title>
+</head>
+<body>
+    <h1>Integrated Games</h1>
+    <div id="menu">
+        <button onclick="showGame('ticTacToe')">Tic Tac Toe</button>
+        <button onclick="showGame('snake')">Snake Game</button>
+        <button onclick="showGame('carRace')">Car Race</button>
+    </div>
+
+    <div id="games">
+        <div id="ticTacToe" class="game" style="display: none;">
+            <h2>Tic Tac Toe</h2>
+            <div class="grid" id="ttt-grid">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+            <button onclick="resetTicTacToe()">Reset</button>
+            <div id="ttt-status"></div>
+        </div>
+
+        <div id="snake" class="game" style="display: none;">
+            <h2>Snake Game</h2>
+            <canvas id="snakeCanvas" width="300" height="300"></canvas>
+            <button onclick="resetSnake()">Reset</button>
+            <div id="snake-status"></div>
+        </div>
+
+        <div id="carRace" class="game" style="display: none;">
+            <h2>Car Race</h2>
+            <div class="race-track" id="carRaceTrack">
+                <div id="car" class="car"></div>
+            </div>
+            <button onclick="resetCarRace()">Reset</button>
+            <div id="car-status"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
